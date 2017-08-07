@@ -3,7 +3,7 @@ MAINTAINER Fabien Herfray <herfray.fabien@gmail.com>
 
 ENV GCLOUD_SDK_VERSION=165.0.0
 
-RUN apk add --update --no-cache git openssh tar gzip ca-certificates wget docker
+RUN apk add --update --no-cache git openssh tar gzip ca-certificates python wget docker
 RUN wget "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz" \
     && tar -xzf "google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz" \
     && rm "google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz" \
