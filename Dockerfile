@@ -9,7 +9,7 @@ RUN wget "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-clou
     && rm "google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz" \
     && google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash-completion=true --rc-path=/.bashrc \
     && google-cloud-sdk/bin/gcloud config set --installation component_manager/disable_update_check true \
-    && export PATH=$PATH:/google-cloud-sdk/bin
+    && export PATH=$PATH:/google-cloud-sdk/bin \
     && rm -rf google-cloud-sdk/.install/.backup \
     && rm -rf google-cloud-sdk/.install/.download \
     && apk del wget \
