@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Fabien Herfray <herfray.fabien@gmail.com>
 
-ENV GCLOUD_SDK_VERSION=165.0.0
+ENV GCLOUD_SDK_VERSION=216.0.0
 
 RUN apk add --update --no-cache git openssh tar gzip ca-certificates python wget docker make
 RUN wget "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GCLOUD_SDK_VERSION}-linux-x86_64.tar.gz" \
